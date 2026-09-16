@@ -1,0 +1,26 @@
+{
+  "name": "jhhzzy-pr-agent",
+  "version": "0.1.0",
+  "description": "JHHZZY PR Agent - a CLI that turns local changes into a pushed branch and an opened pull request, with Claude-written titles and descriptions.",
+  "type": "module",
+  "bin": {
+    "jhhzzy": "bin/jhhzzy.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
+    "zod": "^4.6.5"
+  },
+  "license": "MIT",
+  "private": true
+}
