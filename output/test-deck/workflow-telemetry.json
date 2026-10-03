@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "runId": "20261003131913482-7865ec6e",
+  "goalPath": "/home/user/claud-code/output/test-deck/goal.json",
+  "startedAt": "2026-10-03T13:19:13.483Z",
+  "updatedAt": "2026-10-03T13:20:51.710Z",
+  "totalDurationMs": 98227,
+  "totalStageCount": 4,
+  "failureCount": 1,
+  "retryCount": 1,
+  "stages": {
+    "scaffold": {
+      "count": 2,
+      "successCount": 1,
+      "failureCount": 1,
+      "retryCount": 1,
+      "durationMs": 1984,
+      "lastStatus": "passed",
+      "lastFailureCategory": "layout",
+      "lastFailureReason": "Scaffold failed goal spec validation: - slide 2 variant v1 field projection: missing canonical required fact \"01\" - slide 2 variant v1 field projection: missing canonical required fact \"02\" - slide 2 variant v1 field projection: missing canonical required fact \"03\" - slide 2 variant v1 layout theme01_page064: missing canonical required fact \"01\" - slide 2 variant v1 layout theme01_page064: missing canonical required fact \"02\" - slide 2 variant v1 layout theme01_page064: missing canonical require",
+      "metrics": {
+        "planningPasses": 1,
+        "layoutQueryPasses": 1,
+        "projectionPlansEvaluated": 45,
+        "allocationPasses": 1,
+        "materializationPasses": 1,
+        "materializedVariants": 9,
+        "pageCount": 3
+      }
+    },
+    "render": {
+      "count": 2,
+      "successCount": 2,
+      "failureCount": 0,
+      "retryCount": 0,
+      "durationMs": 709,
+      "lastStatus": "passed",
+      "lastFailureCategory": null,
+      "lastFailureReason": null,
+      "metrics": {
+        "logicalPageCount": 3,
+        "renderedSlideCount": 3
+      }
+    }
+  },
+  "failures": [
+    {
+      "stage": "scaffold",
+      "category": "layout",
+      "reason": "Scaffold failed goal spec validation: - slide 2 variant v1 field projection: missing canonical required fact \"01\" - slide 2 variant v1 field projection: missing canonical required fact \"02\" - slide 2 variant v1 field projection: missing canonical required fact \"03\" - slide 2 variant v1 layout theme01_page064: missing canonical required fact \"01\" - slide 2 variant v1 layout theme01_page064: missing canonical required fact \"02\" - slide 2 variant v1 layout theme01_page064: missing canonical require"
+    }
+  ]
+}

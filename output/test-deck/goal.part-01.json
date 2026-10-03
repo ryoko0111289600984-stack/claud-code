@@ -1,0 +1,1078 @@
+{
+  "schemaVersion": 2,
+  "variantOutputMode": "comparison",
+  "title": "資料作成テスト",
+  "goal": "スライド生成とPPTX書き出しの動作確認",
+  "themePack": "theme01",
+  "pageCount": 3,
+  "randomSeed": "theme01-20261003-tst",
+  "part": {
+    "index": 1,
+    "total": 1,
+    "startSlide": 1,
+    "endSlide": 3
+  },
+  "slides": [
+    {
+      "id": "page-1",
+      "content": {
+        "presentation": {
+          "pageIntent": "cover",
+          "coreMessage": "資料作成フローのテスト用デッキ",
+          "title": {
+            "full": "資料作成テスト",
+            "short": "資料テスト"
+          },
+          "summary": {
+            "full": "3ページ構成でスライド生成とPPTX書き出しを確認します",
+            "short": "生成と書き出しの確認"
+          },
+          "items": [
+            {
+              "id": "fact-1",
+              "label": "目的",
+              "detail": {
+                "full": "生成フローの動作確認",
+                "short": "動作確認"
+              },
+              "required": true,
+              "priority": "high"
+            },
+            {
+              "id": "fact-2",
+              "label": "構成",
+              "detail": {
+                "full": "表紙・本文・まとめの3ページ",
+                "short": "全3ページ"
+              },
+              "required": true,
+              "priority": "medium"
+            },
+            {
+              "id": "fact-3",
+              "label": "形式",
+              "detail": {
+                "full": "PPTXファイルで出力",
+                "short": "PPTX出力"
+              },
+              "required": true,
+              "priority": "medium"
+            }
+          ]
+        }
+      },
+      "selectedVariant": "v1",
+      "variants": [
+        {
+          "id": "v1",
+          "kind": "template",
+          "layout": "theme01_page058",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "note": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "cn": "presentation.pageIntent",
+            "caption": "presentation.summary.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "events",
+              "itemCount",
+              "title",
+              "note",
+              "kicker",
+              "en",
+              "cn",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "fact-1",
+              "fact-2",
+              "fact-3"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "events",
+                  "fields": [
+                    {
+                      "key": "date",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "title",
+                      "semantic": "optional"
+                    },
+                    {
+                      "key": "desc",
+                      "semantic": "detail"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "fact-1"
+                    },
+                    {
+                      "sourceId": "fact-2"
+                    },
+                    {
+                      "sourceId": "fact-3"
+                    }
+                  ],
+                  "countPath": "itemCount"
+                }
+              ],
+              "values": []
+            }
+          }
+        },
+        {
+          "id": "v2",
+          "kind": "template",
+          "layout": "theme01_page083",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "summary": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "cn": "presentation.pageIntent",
+            "bandLabel": "presentation.items[0].label",
+            "caption": "presentation.summary.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "takeaways",
+              "takeawayCount",
+              "title",
+              "summary",
+              "kicker",
+              "en",
+              "cn",
+              "bandLabel",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "fact-3",
+              "fact-2",
+              "fact-1"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "takeaways",
+                  "fields": [
+                    {
+                      "key": "tag",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "en",
+                      "semantic": "optional"
+                    },
+                    {
+                      "key": "text",
+                      "semantic": "optional"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "fact-3"
+                    },
+                    {
+                      "sourceId": "fact-2"
+                    },
+                    {
+                      "sourceId": "fact-1"
+                    },
+                    {
+                      "sourceId": "support:title"
+                    }
+                  ],
+                  "countPath": "takeawayCount"
+                }
+              ],
+              "values": []
+            }
+          }
+        },
+        {
+          "id": "v3",
+          "kind": "template",
+          "layout": "theme01_page046",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "intro": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "caption": "presentation.summary.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "points",
+              "pointCount",
+              "stats",
+              "statCount",
+              "imageSlotCount",
+              "title",
+              "intro",
+              "kicker",
+              "en",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "fact-1",
+              "fact-3",
+              "fact-2"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "points",
+                  "fields": [
+                    {
+                      "key": "h",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "d",
+                      "semantic": "optional"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "fact-1"
+                    },
+                    {
+                      "sourceId": "fact-3"
+                    },
+                    {
+                      "sourceId": "fact-2"
+                    }
+                  ],
+                  "countPath": "pointCount"
+                }
+              ],
+              "values": [
+                {
+                  "path": "stats",
+                  "value": []
+                },
+                {
+                  "path": "statCount",
+                  "value": 0
+                },
+                {
+                  "path": "imageSlotCount",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "v4",
+          "kind": "bespoke",
+          "adjustable": false,
+          "composition": {
+            "designIntent": {
+              "objective": "呈现单页核心信息",
+              "audience": "当前演示文稿受众",
+              "narrativeRole": "推进单页叙事",
+              "emphasis": "突出内容层级与证据关系",
+              "rationale": "statement-1 结构投影"
+            },
+            "background": "default",
+            "elements": [
+              {
+                "id": "bespoke-statement-kicker",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 1,
+                  "width": 4,
+                  "height": 1
+                },
+                "role": "kicker"
+              },
+              {
+                "id": "bespoke-statement-title",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 2,
+                  "width": 8,
+                  "height": 1
+                },
+                "role": "title"
+              },
+              {
+                "id": "bespoke-statement-core",
+                "type": "quote",
+                "grid": {
+                  "column": 1,
+                  "row": 3,
+                  "width": 9,
+                  "height": 5
+                }
+              },
+              {
+                "id": "bespoke-statement-facts",
+                "type": "list",
+                "grid": {
+                  "column": 10,
+                  "row": 3,
+                  "width": 3,
+                  "height": 5
+                },
+                "ordered": true
+              }
+            ]
+          },
+          "projection": {
+            "itemBindings": [
+              {
+                "id": "fact-1",
+                "target": "elements[3].items[0]"
+              },
+              {
+                "id": "fact-2",
+                "target": "elements[3].items[1]"
+              },
+              {
+                "id": "fact-3",
+                "target": "elements[3].items[2]"
+              }
+            ],
+            "chartBindings": [],
+            "mediaBindings": []
+          },
+          "contentMap": {
+            "elements[0].text": "presentation.pageIntent",
+            "elements[1].text": "presentation.title.short",
+            "elements[2].quote": "presentation.coreMessage",
+            "elements[2].attribution": "presentation.summary.short"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-2",
+      "content": {
+        "presentation": {
+          "pageIntent": "body",
+          "coreMessage": "3つのステップで資料を自動作成する",
+          "title": {
+            "full": "作成フローの3ステップ",
+            "short": "3ステップ"
+          },
+          "summary": {
+            "full": "内容を整理し、レイアウトを選び、PPTXへ書き出します",
+            "short": "整理・配置・書き出し"
+          },
+          "items": [
+            {
+              "id": "step-1",
+              "label": "内容整理",
+              "detail": {
+                "full": "伝えたい要点をページごとに整理する",
+                "short": "要点を整理"
+              },
+              "required": true,
+              "priority": "high"
+            },
+            {
+              "id": "step-2",
+              "label": "レイアウト",
+              "detail": {
+                "full": "テーマに合う構成を自動で選ぶ",
+                "short": "構成を自動選択"
+              },
+              "required": true,
+              "priority": "high"
+            },
+            {
+              "id": "step-3",
+              "label": "書き出し",
+              "detail": {
+                "full": "編集可能なPPTXとして出力する",
+                "short": "PPTXで出力"
+              },
+              "required": true,
+              "priority": "high"
+            }
+          ]
+        }
+      },
+      "selectedVariant": "v1",
+      "variants": [
+        {
+          "id": "v1",
+          "kind": "template",
+          "layout": "theme01_page029",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "caption": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "cn": "presentation.pageIntent"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "points",
+              "pointCount",
+              "imageSlotCount",
+              "title",
+              "caption",
+              "kicker",
+              "en",
+              "cn"
+            ],
+            "projectedItemIds": [
+              "step-1",
+              "step-2",
+              "step-3"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "points",
+                  "fields": [
+                    {
+                      "key": "h",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "d",
+                      "semantic": "optional"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "step-1"
+                    },
+                    {
+                      "sourceId": "step-2"
+                    },
+                    {
+                      "sourceId": "step-3"
+                    }
+                  ],
+                  "countPath": "pointCount"
+                }
+              ],
+              "values": [
+                {
+                  "path": "imageSlotCount",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "v2",
+          "kind": "template",
+          "layout": "theme01_page045",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "intro": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "caption": "presentation.summary.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "points",
+              "pointCount",
+              "stats",
+              "statCount",
+              "imageSlotCount",
+              "title",
+              "intro",
+              "kicker",
+              "en",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "step-3",
+              "step-2",
+              "step-1"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "points",
+                  "fields": [
+                    {
+                      "key": "h",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "d",
+                      "semantic": "optional"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "step-3"
+                    },
+                    {
+                      "sourceId": "step-2"
+                    },
+                    {
+                      "sourceId": "step-1"
+                    }
+                  ],
+                  "countPath": "pointCount"
+                }
+              ],
+              "values": [
+                {
+                  "path": "stats",
+                  "value": []
+                },
+                {
+                  "path": "statCount",
+                  "value": 0
+                },
+                {
+                  "path": "imageSlotCount",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "v3",
+          "kind": "template",
+          "layout": "theme01_page063",
+          "contentMap": {
+            "kicker": "presentation.title.short",
+            "caption": "presentation.coreMessage",
+            "en": "presentation.title.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "titleLines",
+              "titleLineCount",
+              "bigStat.value",
+              "bigStat.unit",
+              "bigStat.label",
+              "notes",
+              "noteCount",
+              "imageSlotCount",
+              "kicker",
+              "caption",
+              "en"
+            ],
+            "projectedItemIds": [
+              "step-2",
+              "step-1",
+              "step-3"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "titleLines",
+                  "fields": [
+                    {
+                      "key": "text",
+                      "semantic": "label"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "step-2"
+                    },
+                    {
+                      "sourceId": "step-1"
+                    },
+                    {
+                      "sourceId": "step-3"
+                    }
+                  ],
+                  "countPath": "titleLineCount"
+                }
+              ],
+              "values": [
+                {
+                  "path": "bigStat.value",
+                  "value": ""
+                },
+                {
+                  "path": "bigStat.unit",
+                  "value": ""
+                },
+                {
+                  "path": "bigStat.label",
+                  "value": ""
+                },
+                {
+                  "path": "notes",
+                  "value": []
+                },
+                {
+                  "path": "noteCount",
+                  "value": 0
+                },
+                {
+                  "path": "imageSlotCount",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "v4",
+          "kind": "bespoke",
+          "adjustable": false,
+          "composition": {
+            "designIntent": {
+              "objective": "呈现单页核心信息",
+              "audience": "当前演示文稿受众",
+              "narrativeRole": "推进单页叙事",
+              "emphasis": "突出内容层级与证据关系",
+              "rationale": "ledger-2 结构投影"
+            },
+            "background": "default",
+            "elements": [
+              {
+                "id": "bespoke-ledger-kicker",
+                "type": "text",
+                "grid": {
+                  "column": 10,
+                  "row": 1,
+                  "width": 3,
+                  "height": 1
+                },
+                "role": "kicker"
+              },
+              {
+                "id": "bespoke-ledger-title",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 1,
+                  "width": 9,
+                  "height": 1
+                },
+                "role": "title"
+              },
+              {
+                "id": "bespoke-ledger-core",
+                "type": "text",
+                "grid": {
+                  "column": 6,
+                  "row": 2,
+                  "width": 7,
+                  "height": 1
+                },
+                "role": "subtitle"
+              },
+              {
+                "id": "bespoke-ledger-summary",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 2,
+                  "width": 5,
+                  "height": 1
+                },
+                "role": "caption"
+              },
+              {
+                "id": "bespoke-ledger-facts",
+                "type": "list",
+                "grid": {
+                  "column": 1,
+                  "row": 3,
+                  "width": 12,
+                  "height": 6
+                },
+                "ordered": true
+              }
+            ]
+          },
+          "projection": {
+            "itemBindings": [
+              {
+                "id": "step-1",
+                "target": "elements[4].items[0]"
+              },
+              {
+                "id": "step-2",
+                "target": "elements[4].items[1]"
+              },
+              {
+                "id": "step-3",
+                "target": "elements[4].items[2]"
+              }
+            ],
+            "chartBindings": [],
+            "mediaBindings": []
+          },
+          "contentMap": {
+            "elements[0].text": "presentation.pageIntent",
+            "elements[1].text": "presentation.title.short",
+            "elements[2].text": "presentation.coreMessage",
+            "elements[3].text": "presentation.summary.short"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-3",
+      "content": {
+        "presentation": {
+          "pageIntent": "closing",
+          "coreMessage": "テストは完了、次は本番資料へ",
+          "title": {
+            "full": "まとめと次のアクション",
+            "short": "まとめ"
+          },
+          "summary": {
+            "full": "生成と書き出しの流れを確認できました。次は本番の内容で作成します",
+            "short": "次は本番資料を作成"
+          },
+          "items": [
+            {
+              "id": "next-1",
+              "label": "確認",
+              "detail": {
+                "full": "仕上がりと文字の崩れを確認",
+                "short": "仕上がり確認"
+              },
+              "required": true,
+              "priority": "high"
+            },
+            {
+              "id": "next-2",
+              "label": "調整",
+              "detail": {
+                "full": "配色やフォントを好みに合わせる",
+                "short": "デザイン調整"
+              },
+              "required": true,
+              "priority": "medium"
+            },
+            {
+              "id": "next-3",
+              "label": "本番",
+              "detail": {
+                "full": "実際の内容で資料を作成する",
+                "short": "本番作成"
+              },
+              "required": true,
+              "priority": "medium"
+            }
+          ]
+        }
+      },
+      "selectedVariant": "v1",
+      "variants": [
+        {
+          "id": "v1",
+          "kind": "template",
+          "layout": "theme01_page009",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "caption": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "cn": "presentation.pageIntent"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "chapters",
+              "chapterCount",
+              "title",
+              "caption",
+              "kicker",
+              "en",
+              "cn"
+            ],
+            "projectedItemIds": [
+              "next-1",
+              "next-2",
+              "next-3"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "chapters",
+                  "fields": [
+                    {
+                      "key": "no",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "label",
+                      "semantic": "optional"
+                    },
+                    {
+                      "key": "en",
+                      "semantic": "optional"
+                    },
+                    {
+                      "key": "desc",
+                      "semantic": "detail"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "next-1"
+                    },
+                    {
+                      "sourceId": "next-2"
+                    },
+                    {
+                      "sourceId": "next-3"
+                    }
+                  ],
+                  "countPath": "chapterCount"
+                }
+              ],
+              "values": []
+            }
+          }
+        },
+        {
+          "id": "v2",
+          "kind": "template",
+          "layout": "theme01_page058",
+          "contentMap": {
+            "title": "presentation.title.short",
+            "note": "presentation.coreMessage",
+            "kicker": "presentation.title.full",
+            "en": "presentation.summary.short",
+            "cn": "presentation.pageIntent",
+            "caption": "presentation.summary.full"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "events",
+              "itemCount",
+              "title",
+              "note",
+              "kicker",
+              "en",
+              "cn",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "next-3",
+              "next-2",
+              "next-1"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "events",
+                  "fields": [
+                    {
+                      "key": "date",
+                      "semantic": "label"
+                    },
+                    {
+                      "key": "title",
+                      "semantic": "optional"
+                    },
+                    {
+                      "key": "desc",
+                      "semantic": "detail"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "next-3"
+                    },
+                    {
+                      "sourceId": "next-2"
+                    },
+                    {
+                      "sourceId": "next-1"
+                    },
+                    {
+                      "sourceId": "support:title"
+                    }
+                  ],
+                  "countPath": "itemCount"
+                }
+              ],
+              "values": []
+            }
+          }
+        },
+        {
+          "id": "v3",
+          "kind": "template",
+          "layout": "theme01_page052",
+          "contentMap": {
+            "eyebrow": "presentation.title.short",
+            "lead": "presentation.coreMessage",
+            "caption": "presentation.summary.short"
+          },
+          "projection": {
+            "chartMode": "none",
+            "contentPaths": [
+              "titleLines",
+              "tags",
+              "tagCount",
+              "imageSlotCount",
+              "eyebrow",
+              "lead",
+              "caption"
+            ],
+            "projectedItemIds": [
+              "next-1",
+              "next-3",
+              "next-2"
+            ],
+            "chartBindings": [],
+            "structure": {
+              "arrays": [
+                {
+                  "path": "titleLines",
+                  "fields": [
+                    {
+                      "key": "text",
+                      "semantic": "label"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "sourceId": "next-1"
+                    },
+                    {
+                      "sourceId": "next-3"
+                    },
+                    {
+                      "sourceId": "next-2"
+                    }
+                  ]
+                }
+              ],
+              "values": [
+                {
+                  "path": "tags",
+                  "value": []
+                },
+                {
+                  "path": "tagCount",
+                  "value": 0
+                },
+                {
+                  "path": "imageSlotCount",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "v4",
+          "kind": "bespoke",
+          "adjustable": false,
+          "composition": {
+            "designIntent": {
+              "objective": "呈现单页核心信息",
+              "audience": "当前演示文稿受众",
+              "narrativeRole": "推进单页叙事",
+              "emphasis": "突出内容层级与证据关系",
+              "rationale": "statement-3 结构投影"
+            },
+            "background": "default",
+            "elements": [
+              {
+                "id": "bespoke-statement-kicker",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 1,
+                  "width": 4,
+                  "height": 1
+                },
+                "role": "kicker"
+              },
+              {
+                "id": "bespoke-statement-title",
+                "type": "text",
+                "grid": {
+                  "column": 1,
+                  "row": 2,
+                  "width": 8,
+                  "height": 1
+                },
+                "role": "title"
+              },
+              {
+                "id": "bespoke-statement-core",
+                "type": "quote",
+                "grid": {
+                  "column": 1,
+                  "row": 3,
+                  "width": 9,
+                  "height": 5
+                }
+              },
+              {
+                "id": "bespoke-statement-facts",
+                "type": "list",
+                "grid": {
+                  "column": 10,
+                  "row": 3,
+                  "width": 3,
+                  "height": 5
+                },
+                "ordered": true
+              }
+            ]
+          },
+          "projection": {
+            "itemBindings": [
+              {
+                "id": "next-1",
+                "target": "elements[3].items[0]"
+              },
+              {
+                "id": "next-2",
+                "target": "elements[3].items[1]"
+              },
+              {
+                "id": "next-3",
+                "target": "elements[3].items[2]"
+              }
+            ],
+            "chartBindings": [],
+            "mediaBindings": []
+          },
+          "contentMap": {
+            "elements[0].text": "presentation.pageIntent",
+            "elements[1].text": "presentation.title.short",
+            "elements[2].quote": "presentation.coreMessage",
+            "elements[2].attribution": "presentation.summary.short"
+          }
+        }
+      ]
+    }
+  ]
+}

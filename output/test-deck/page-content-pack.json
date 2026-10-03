@@ -1,0 +1,46 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "presentation": {
+        "pageIntent": "cover",
+        "coreMessage": "資料作成フローのテスト用デッキ",
+        "title": {"full": "資料作成テスト", "short": "資料テスト"},
+        "summary": {"full": "3ページ構成でスライド生成とPPTX書き出しを確認します", "short": "生成と書き出しの確認"},
+        "items": [
+          {"id": "fact-1", "label": "目的", "detail": {"full": "生成フローの動作確認", "short": "動作確認"}, "required": true, "priority": "high"},
+          {"id": "fact-2", "label": "構成", "detail": {"full": "表紙・本文・まとめの3ページ", "short": "全3ページ"}, "required": true, "priority": "medium"},
+          {"id": "fact-3", "label": "形式", "detail": {"full": "PPTXファイルで出力", "short": "PPTX出力"}, "required": true, "priority": "medium"}
+        ]
+      }
+    },
+    {
+      "id": "page-2",
+      "presentation": {
+        "pageIntent": "body",
+        "coreMessage": "3つのステップで資料を自動作成する",
+        "title": {"full": "作成フローの3ステップ", "short": "3ステップ"},
+        "summary": {"full": "内容を整理し、レイアウトを選び、PPTXへ書き出します", "short": "整理・配置・書き出し"},
+        "items": [
+          {"id": "step-1", "label": "内容整理", "detail": {"full": "伝えたい要点をページごとに整理する", "short": "要点を整理"}, "required": true, "priority": "high"},
+          {"id": "step-2", "label": "レイアウト", "detail": {"full": "テーマに合う構成を自動で選ぶ", "short": "構成を自動選択"}, "required": true, "priority": "high"},
+          {"id": "step-3", "label": "書き出し", "detail": {"full": "編集可能なPPTXとして出力する", "short": "PPTXで出力"}, "required": true, "priority": "high"}
+        ]
+      }
+    },
+    {
+      "id": "page-3",
+      "presentation": {
+        "pageIntent": "closing",
+        "coreMessage": "テストは完了、次は本番資料へ",
+        "title": {"full": "まとめと次のアクション", "short": "まとめ"},
+        "summary": {"full": "生成と書き出しの流れを確認できました。次は本番の内容で作成します", "short": "次は本番資料を作成"},
+        "items": [
+          {"id": "next-1", "label": "確認", "detail": {"full": "仕上がりと文字の崩れを確認", "short": "仕上がり確認"}, "required": true, "priority": "high"},
+          {"id": "next-2", "label": "調整", "detail": {"full": "配色やフォントを好みに合わせる", "short": "デザイン調整"}, "required": true, "priority": "medium"},
+          {"id": "next-3", "label": "本番", "detail": {"full": "実際の内容で資料を作成する", "short": "本番作成"}, "required": true, "priority": "medium"}
+        ]
+      }
+    }
+  ]
+}
